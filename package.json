@@ -1,59 +1,59 @@
-﻿{
-    "name":  "otp-dashboard",
-    "version":  "1.0.3",
-    "description":  "Dashboard de Pedidos - App Electron",
-    "main":  "main.js",
-    "repository":  {
-                       "type":  "git",
-                       "url":  "https://github.com/Pedro-Vieira1507/OTD-Dashboard.git"
-                   },
-    "scripts":  {
-                    "start":  "electron .",
-                    "dist":  "electron-builder --publish never",
-                    "publish":  "electron-builder --publish always"
-                },
-    "build":  {
-                  "appId":  "com.otp.dashboard",
-                  "productName":  "DashboardPedidos",
-                  "publish":  [
-                                  {
-                                      "provider":  "github",
-                                      "owner":  "Pedro-Vieira1507",
-                                      "repo":  "OTD-Dashboard"
-                                  }
-                              ],
-                  "files":  [
-                                "main.js",
-                                "preload.js",
-                                "renderer/**/*",
-                                "assets/**/*",
-                                "package.json"
-                            ],
-                  "directories":  {
-                                      "buildResources":  "assets"
-                                  },
-                  "win":  {
-                              "target":  "nsis",
-                              "icon":  "assets/icon.ico"
-                          },
-                  "mac":  {
-                              "target":  "dmg",
-                              "icon":  "assets/icon.icns"
-                          },
-                  "linux":  {
-                                "target":  [
-                                               "AppImage",
-                                               "deb"
-                                           ],
-                                "icon":  "assets"
-                            }
-              },
-    "devDependencies":  {
-                            "electron":  "^30.0.0",
-                            "electron-builder":  "^24.0.0",
-                            "electron-icon-maker":  "^0.0.5"
-                        },
-    "dependencies":  {
-                         "electron-updater":  "^6.1.5"
-                     }
+{
+    "name": "OTD-dashboard",
+    "version": "1.2.2",
+    "description": "Dashboard de Pedidos - App Electron",
+    "main": "main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Pedro-Vieira1507/OTD-Dashboard.git"
+    },
+    "scripts": {
+        "start": "electron .",
+        "dist": "electron-builder --publish never",
+        "publish": "electron-builder --publish always"
+    },
+    "build": {
+        "appId": "com.otp.dashboard",
+        "productName": "DashboardPedidos",
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "Pedro-Vieira1507",
+                "repo": "OTD-Dashboard"
+            }
+        ],
+        "files": [
+            "main.js",
+            "preload.js",
+            "renderer/**/*",
+            "assets/**/*",
+            "package.json"
+        ],
+        "directories": {
+            "buildResources": "assets"
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon.ico"
+        },
+        "mac": {
+            "target": "dmg",
+            "icon": "assets/icon.icns"
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ],
+            "icon": "assets"
+        }
+    },
+    "devDependencies": {
+        "electron": "^30.0.0",
+        "electron-builder": "^24.0.0",
+        "electron-icon-maker": "^0.0.5"
+    },
+    "dependencies": {
+        "electron-updater": "^6.6.2"
+    }
 }

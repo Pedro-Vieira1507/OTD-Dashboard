@@ -57,7 +57,7 @@ git push
 # 7 - Gera o instalador e publica no GitHub Releases
 Write-Host ""
 Write-Host "Gerando build e publicando..."
-npm run dist
+npm run publish # <-- CORRETO: Usa o comando que publica os artefatos!
 
 Write-Host ""
 Write-Host "Publicacao concluida."
